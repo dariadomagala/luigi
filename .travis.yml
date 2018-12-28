@@ -1,11 +1,11 @@
 language: node_js
- node_js:
-   - 'node'
- install: npm install --prefix core
- jobs:
-   include:
-     - stage: 'Tests'
-       name: 'Unit Tests'
-       script: npm test --prefix core
-     - script: bash ./test/e2e.sh
-       name: 'Integration Tests'
+node_js:
+  - 'node'
+install: npm install --prefix core
+jobs:
+  include:
+    - stage: 'Tests'
+      name: 'Unit Tests'
+      script: npm test --prefix core
+    - script: bash ./test/e2e.sh
+      name: 'Integration Tests'
